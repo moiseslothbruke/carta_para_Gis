@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+main{
+    width: 98vw;
+    height: 98vh;
+}
+
+h1, h2{
+    text-align: center;
+}
+
+/*fonte especial*/
+
+p{
+    text-align: justify;
+    padding: 20px;
+    margin: 0px;
+    font-size: 2em;
+}
+/*procurar uma fonte boa para leitura*/
+
+div{
+    min-width: 500px;
+    height: 25vh;
+}
+
+/*Footer e conteúdo estão quebrando*/
