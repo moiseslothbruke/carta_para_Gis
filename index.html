@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Te amo</title>
     <link rel="stylesheet" href="estilo/style.css">
+    <link rel="shortcut icon" href="imagens/carta-de-amor.png" type="image/png">
     <style>
 
         .container{
@@ -12,24 +13,38 @@
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            padding-top: 30vh;
+            padding-top: 20vh;
+            padding-left: 0px;
+            padding-right: 0px;
             height: 50vh;
         }
 
         .box{
-            border-radius: 10px;
+            border-radius: 20px;
             text-align: center;
             min-width: 150px;
             min-height: 75px;
-            background-image: linear-gradient(to left, #7267e9, #d54adc);
-            /*Estudar os displays das caixas*/
+            background-image: linear-gradient(to left, #7267e98e, #d54adc8c);
+            background-position: center right;
+        }
+
+        body{
+            width: 98vw;
+            height: 100vh;
+            padding-top: 20vh;
+            background-color: black;
+            background-image: url(imagens/fundo002.jpg);
+            overflow: hidden;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0px;
+            /*BACKGROUND IMAGE*/
         }
 
         main{
-            width: 100vw;
-            height: 100vh;
-            background-color: black;
-            /*BACKGROUND IMAGE*/
+            margin: 0px;
+            padding: 0px;
         }
 
         .box > p{ 
@@ -42,15 +57,18 @@
             color: white;
         }
 
+        .box > p > a:hover{
+            color: rgb(245, 10, 49);
+            transition-duration: 0.5s;
+        }
+
     </style>
 </head>
 <body>
-    <main>   <!--
-    A div deve conter um background image
-    -->
+    <main>   
         <div class="container">
             <div class="box"> 
-                <p><a href="carta.html">Clique aqui ❤️</a></p>
+                <p><a href="carta.html" target="_blank">Clique aqui ❤️</a></p>
             </div>
         </div>
     </main>
