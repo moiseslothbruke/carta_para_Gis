@@ -23,6 +23,10 @@ h1, h2{
     text-align: center;
 }
 
+div{
+    display: flex;
+}
+
 /*fonte especial*/
 
 p{
@@ -32,10 +36,3 @@ p{
     font-size: 2em;
 }
 /*procurar uma fonte boa para leitura*/
-
-div{
-    min-width: 500px;
-    height: 25vh;
-}
-
-/*Footer e conteúdo estão quebrando*/

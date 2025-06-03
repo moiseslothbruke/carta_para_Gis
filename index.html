@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Te amo</title>
     <link rel="stylesheet" href="estilo/style.css">
     <link rel="shortcut icon" href="imagens/carta-de-amor.png" type="image/png">
@@ -13,7 +14,6 @@
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            padding-top: 20vh;
             padding-left: 0px;
             padding-right: 0px;
             height: 50vh;
@@ -47,6 +47,7 @@
             padding: 0px;
         }
 
+
         .box > p{ 
             position: relative;
             top: 30%;
@@ -62,23 +63,60 @@
             transition-duration: 0.5s;
         }
 
-        .moldura{
-            width: 10vw;
-            height: 10vh;
+        .relogio{
+            display: flex;
+            align-items: center;
         }
 
-        .relógio{
-            max-width: 150px;
-            max-height: 75px;
+        #hseta{
+            width: 100px;
+            height: 25px;
+            position: relative;
+            left: 70px;
+            bottom: 200px;
+        }
+
+        #mseta{
+            width: 100px;
+            height: 25px;
+            position: relative;
+            left: 70px;
+            bottom: 200px;
+        }
+
+        #sseta{
+            width: 100px;
+            height: 25px;
+            position: relative;
+            left: 70px;
+            bottom: 200px;
+        }
+
+        h1{
+            padding-bottom: 50px;
         }
 
     </style>
 </head>
 <body>
-    <main>   
-        <div class="moldura"> <!--Fazer um relógio-->
-            <div class="relógio"></div>
+    <header>
+        <h1>Nosso dia</h1> <!--fonte especial-->
+        <div class="relogio">
+            <div id="hseta">
+                <span id="horas">00</span>
+                <span class="tempo">horas</span>
+            </div>
+            <div id="mseta">
+                <span id="minutos">00</span>
+                <span class="tempo">minutos</span>
+            </div>
+            <div id="sseta">
+                <span id="segundos">00</span>
+                <span class="tempo">segundos</span>
+            </div>
         </div>
+    </header>
+    <main>
         <div class="container">
             <div class="box"> 
                 <p><a href="carta.html" target="_blank">Clique aqui ❤️</a></p>
