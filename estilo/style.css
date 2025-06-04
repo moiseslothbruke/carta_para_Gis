@@ -15,6 +15,12 @@ Paleta de cor:
     padding: 0px;
 }
 
+body{
+    background-color: rgba(0, 0, 0, 0.72);
+
+    /*As partes sobrando terão molduras com fotos nossas*/
+}
+
 :root{
     --fonteespecial: "Lily Script One" , monospace;
     --fontenormal: Arial, Helvetica, sans-serif;
@@ -23,11 +29,21 @@ Paleta de cor:
 
     --cor01: #7267e98e; 
     --cor02: #d54adc8c;
+
+    /*CORES PARA O HEADER, MAIN E FOOTER*/
+
+
 }
 
-main{
-    width: 98vw;
-    height: 98vh;
+header{
+
+    background-color: rgb(245, 190, 80);
+
+}
+
+#datan{
+    text-align: center;
+    font-size: x-small;
 }
 
 h1, h2{
@@ -35,6 +51,14 @@ h1, h2{
     font-family: var(--fonteespecial);
     color: #e95b5bc6;
     
+}
+
+main{
+    background-color: white;
+    width:60vw;
+    height: 98vh;
+    margin: auto;
+    border-radius: 15px;
 }
 
 div{
@@ -48,5 +72,7 @@ p{
     padding: 20px;
     margin: 0px;
     font-size: 2em;
+    font-family: var(--fontenormal);
+
 }
 /*procurar uma fonte boa para leitura*/
