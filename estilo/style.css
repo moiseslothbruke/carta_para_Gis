@@ -16,7 +16,7 @@ Paleta de cor:
 }
 
 body{
-    background-color: rgba(0, 0, 0, 0.72);
+    background-color: sienna;
 
     /*As partes sobrando terão molduras com fotos nossas*/
 }
@@ -29,6 +29,7 @@ body{
 
     --cor01: #7267e98e; 
     --cor02: #d54adc8c;
+    --cor03: rgb(255, 255, 255); /*para. em fundo de imagem*/
 
     /*CORES PARA O HEADER, MAIN E FOOTER*/
 
@@ -37,7 +38,7 @@ body{
 
 header{
 
-    background-color: rgb(245, 190, 80);
+    background-color: bisque;
 
 }
 
@@ -54,11 +55,44 @@ h1, h2{
 }
 
 main{
-    background-color: white;
+    box-sizing: border-box;
     width:60vw;
-    height: 98vh;
+    height: 100vh;
     margin: auto;
     border-radius: 15px;
+}
+
+.normal{
+    background-color: white;
+    max-width: 350px;
+    max-height: 600px;
+    margin: auto;
+}
+
+.imagem1{
+    max-width: 350px;
+    max-height: 600px;
+    margin: auto;
+    background-image: url(../imagens/fundo003.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: var(--cor03);
+    font-weight: bolder;
+}
+
+.imagem2{
+    max-width: 350px; /*Perguntar o modelo do celular para saber a largura de forma precisa*/
+    max-height: 600px;
+    margin: auto;
+    background-image: url(../imagens/fundo004.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: var(--cor03);
+    font-weight: bolder;
 }
 
 div{
@@ -67,11 +101,15 @@ div{
 
 /*fonte especial*/
 
+
+
 p{
+    line-height: 1.7em;
+    text-indent: 5px;
     text-align: justify;
-    padding: 20px;
+    padding: 10px;
     margin: 0px;
-    font-size: 2em;
+    font-size: 1em;
     font-family: var(--fontenormal);
 
 }
