@@ -91,7 +91,7 @@ main{
 
 .imagem2{
     max-width: 1080px; /*Perguntar o modelo do celular para saber a largura de forma precisa*/
-    max-height: 2340px;
+    max-height: 2340px; /*Imsgem tem que ser adaptável a tela*/
     margin: auto;
     background-image: url(../imagens/fundo004.jpeg);
     background-position: center center;
