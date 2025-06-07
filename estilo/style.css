@@ -68,16 +68,16 @@ main{
 
 .normal{
     background-color: bisque;
-    max-width: 1080px;
-    max-height: 2340px;
+    max-width: 2340px;
+    max-height: 1080px; 
     margin: auto;
     box-shadow: 1px 1px 2px 2px inset rgba(0, 0, 0, 0.294);
     box-shadow:  1px 2px 2px rgba(0, 0, 0, 0.419)
 }
 
 .imagem1{
-    max-width: 1080px;
-    max-height: 2340px;
+    max-width: 2340px;
+    max-height: 1080px;
     margin: auto;
     background-image: url(../imagens/fundo003.jpeg);
     background-position: center center;
@@ -90,8 +90,8 @@ main{
 }
 
 .imagem2{
-    max-width: 1080px; /*Perguntar o modelo do celular para saber a largura de forma precisa*/
-    max-height: 2340px; /*Imsgem tem que ser adaptável a tela*/
+    max-width: 2340px; 
+    max-height: 1080px; 
     margin: auto;
     background-image: url(../imagens/fundo004.jpeg);
     background-position: center center;
@@ -120,6 +120,34 @@ p{
     font-size: 1em;
     font-family: var(--fontenormal);
 
+}
+
+#moldura1{
+    position: relative;
+
+}
+
+#moldura2{
+    position: relative;
+}
+
+#moldura3{
+    position: relative;
+}
+
+#moldura4{
+    position: relative;
+    left: 82%;
+}
+
+#moldura5{
+    position: relative;
+    left: 82%;
+}
+
+#moldura6{
+    position: relative;
+    left: 82%;
 }
 /*procurar uma fonte boa para leitura*/
 
