@@ -113,17 +113,52 @@ div{
 
 p{
     line-height: 1.7em;
+    max-width: 700px;
     text-indent: 5px;
     text-align: justify;
     padding: 10px;
     margin: 0px;
     font-size: 1em;
     font-family: var(--fontenormal);
+    margin: auto;
 
 }
 
+p.destaque{
+    background-color: rgba(128, 128, 128, 0.423);
+    max-width: 700px;
+}
+
+span{
+    padding: 100px;
+    font-family: var(--fonteespecial);
+    font-size: large;
+    color: red;
+    text-decoration: underline;
+}
+
+footer{
+    background-color: black;
+    height: 15vh;
+    
+    position: relative;
+}
+
+p#prodape{
+    background-color: rgba(0, 0, 0, 0.72);
+    text-align: center;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: red;
+    font-weight: bolder;
+    font-family: var(--fontenormal);
+}
+
 /*
-Adicionar as imagens que vão ficar ao lado no body - PRÓXIMA TAREFA.
+Editar o rodapé
 Editar a página "Eu falei bobinha"
 fazer um play music personalizado;
 fazer o timer.
