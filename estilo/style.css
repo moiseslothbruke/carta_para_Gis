@@ -17,7 +17,7 @@ Paleta de cor:
 
 body{
     box-shadow: 2px, solid sienna;
-    background-color: rgb(255, 125, 125); /*adicionar gradiente*/
+    background-color: white; /*adicionar gradiente*/
 
     /*As partes sobrando terão molduras com fotos nossas*/
 }
@@ -52,7 +52,7 @@ header{
 h1, h2{
     text-align: center;
     font-family: var(--fonteespecial);
-    color: #e95b5bc6;
+    color: #f02828c6;
     
 }
 
@@ -150,6 +150,7 @@ p#prodape{
     background-image: url(../imagens/fundo013.jpeg);
     background-position: top left;
     background-size: cover;
+
     
 }
 
@@ -162,17 +163,11 @@ a{
 
 #aviso{
     font-family: var(--fontenormal);
-    font-weight: bolder;
-    text-decoration: none;
-    position: relative;
-    bottom: 55px;
-    color: red;
     text-align: center;
-    margin: 0px;
-    width: 250px;
-    position: relative;
-    left: 40%;
-
+    font-size: 1em;
+    color: rgb(255, 249, 249);
+    margin: 0px 0px 0px 15px;
+    
 }
 
 #capivara{
@@ -180,13 +175,15 @@ a{
     max-height: 100px;
     position: relative;
     top: 20px;
+
 }
 
 div#nclick{
     width: 60%;
     align-items: center;
     position: relative;
-    right: 25%;
+    bottom: 20px;
+    left: 10px;
 }
 
 /*
