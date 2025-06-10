@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo/style2.css">
+    <link rel="shortcut icon" href="imagens/eufalei.png" type="image/x-icon">
+    <title>te falei, kakakaka</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slider de Imagens</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+
+    .slider {
+      position: relative;
+      width: 90%;
+      max-width: 800px;
+      margin: 50px auto;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+      min-width: 100%;
+    }
+
+    .slide img {
+      width: 100%;
+      display: block;
+    }
+
+    .nav-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .prev, .next {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 18px;
+      border-radius: 50%;
+      margin: 0 10px;
+    }
+
+    .prev:hover, .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="slider">
+    <div class="slides">
+      <!-- 18 imagens -->
+      <div class="slide"><img src="https://placekitten.com/800/400" alt="Imagem 1"></div>
+      <div class="slide"><img src="https://placebear.com/800/400" alt="Imagem 2"></div>
+      <div class="slide"><img src="https://placehold.co/800x400/aaa/fff?text=Imagem+3" alt="Imagem 3"></div>
+      <div class="slide"><img src="https://placehold.co/800x400/111/eee?text=Imagem+4" alt="Imagem 4"></div>
+      <div class="slide"><img src="https://placehold.co/800x400/222/fff?text=Imagem+5" alt="Imagem 5"></div>
+      <div class="slide"><img src="https://placehold.co/800x400/333/fff?text=Imagem+6" alt="Imagem 6"></div>
+      <div class="slide"><img src="https://placehold.co/800x400/444/fff?text=Imagem+7" alt="Imagem 7"></div>
+      <div class="slide"><img src="https://placehold.co/800x400/555/fff?text=Imagem+8" alt="Imagem 8"></div>
+      <div class="slide"><img src="https://placehold.co/800x400/666/fff?text=Imagem+9" alt="Imagem 9"></div>
+      <div class="slide"><img src="https://placehold.co/800x400/777/fff?text=Imagem+10" alt="Imagem 10"></div>
+      <div class="slide"><img src="https://placehold.co/800x400/888/fff?text=Imagem+11" alt="Imagem 11"></div>
+      <div class="slide"><img src="https://placehold.co/800x400/999/fff?text=Imagem+12" alt="Imagem 12"></div>
+      <div class="slide"><img src="https://placehold.co/800x400/abc/fff?text=Imagem+13" alt="Imagem 13"></div>
+      <div class="slide"><img src="https://placehold.co/800x400/bcd/fff?text=Imagem+14" alt="Imagem 14"></div>
+      <div class="slide"><img src="https://placehold.co/800x400/cde/fff?text=Imagem+15" alt="Imagem 15"></div>
+      <div class="slide"><img src="https://placehold.co/800x400/def/fff?text=Imagem+16" alt="Imagem 16"></div>
+      <div class="slide"><img src="https://placehold.co/800x400/0ff/000?text=Imagem+17" alt="Imagem 17"></div>
+      <div class="slide"><img src="https://placehold.co/800x400/f0f/000?text=Imagem+18" alt="Imagem 18"></div>
+    </div>
+
+    <div class="nav-buttons">
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+    </div>
+  </div>
+
+  <script>
+    const slides = document.querySelector('.slides');
+    const slideElements = document.querySelectorAll('.slide');
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      if (index >= slideElements.length) currentIndex = 0;
+      else if (index < 0) currentIndex = slideElements.length - 1;
+      else currentIndex = index;
+
+      const offset = -currentIndex * 100;
+      slides.style.transform = `translateX(${offset}%)`;
+    }
+
+    prevButton.addEventListener('click', () => showSlide(currentIndex - 1));
+    nextButton.addEventListener('click', () => showSlide(currentIndex + 1));
+
+    // Slide automático
+    setInterval(() => {
+      showSlide(currentIndex + 1);
+    }, 5000);
+  </script>
+
+</body>
+</html>
+
+</body>
+</html>
