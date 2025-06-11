@@ -44,16 +44,38 @@ header{
 
 }
 
-#datan{
-    text-align: center;
-    font-size: x-small;
-}
-
 h1, h2{
     text-align: center;
     font-family: var(--fonteespecial);
     color: #f02828c6;
-    
+}
+
+.moldura{
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.timer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.timer div {
+  color: rgb(181, 155, 155);
+  background-color: white;
+  padding: 10px 20px;
+  font-weight: bolder;
+  border-radius: 8px;
+  font-size: 18px;
+}
+
+span.cor{
+    color: rgb(97, 87, 87);
 }
 
 main{
