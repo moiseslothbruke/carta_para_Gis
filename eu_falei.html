@@ -80,7 +80,6 @@
     .player {
       background-image: url(imagens/tribalistas.jpg);
       background-size: contain;
-
       padding: 30px;
       margin: 50px auto;
       border-radius: 12px;
@@ -141,8 +140,8 @@
     <!--Music Player-->
 
         <div class="player">
-        <div class="track-title" id="trackTitle">Nome da Música</div>
-        <audio id="audioPlayer" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+        <div class="track-title" id="trackTitle">Velha Infância</div>
+        <audio id="audioPlayer" src="audio/Tribalistas - Velha Infância.mp3"></audio>
         
         <div class="controls">
           <button class="play-btn" id="playPauseBtn">▶️</button>
@@ -220,8 +219,8 @@
     const trackTitle = document.getElementById('trackTitle');
 
     const track = {
-      title: "SoundHelix Song 1",
-      src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+      title: "Velha infância",
+      src: "audio/Tribalistas - Velha Infância.mp3"
     };
 
     audio.src = track.src;
