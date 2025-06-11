@@ -44,7 +44,8 @@ header{
 h1, h2{
     text-align: center;
     font-family: var(--fonteespecial);
-    color: rgb(241, 160, 122);
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
     
 }
 
