@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilo/style2.css">
-    <link rel="shortcut icon" href="imagens/eufalei.png" type="image/x-icon">
+    <link rel="shortcut icon" href="imagens/eufalei.png" type="image/png">
     <title>te falei, kakakaka</title>
 </head>
 <body>
@@ -23,6 +22,7 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      height: 100vh;
       background-color: #f0f0f0;
     }
 
@@ -30,6 +30,7 @@
       position: relative;
       width: 90%;
       max-width: 300px;
+      max-height: 400px;
       margin: 50px auto;
       overflow: hidden;
       border-radius: 10px;
@@ -44,19 +45,6 @@
     .slide {
       min-width: 100%;
     }
-
-    /*centralizar as imagens*/
-
-    /*
-    IMG 2
-    IMG 3
-    IMG 7
-    IMG 8
-    IMG 10
-    IMG 11
-    IMG 17
-
-    */
 
     .slide img {
       display: block;
@@ -86,10 +74,84 @@
       background-color: rgba(0, 0, 0, 0.8);
     }
 
+    /*Music Player*/
+
+
+    .player {
+      background-image: #1e1e1e;
+      padding: 30px;
+      margin: 50px auto;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+      width: 320px;
+      text-align: center;
+      
+    }
+
+    .track-title {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .controls {
+      margin: 15px 0;
+    }
+
+    .play-btn {
+      font-size: 32px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: white;
+    }
+
+    .progress-container {
+      width: 100%;
+      height: 5px;
+      background: #555;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 15px 0;
+      position: relative;
+    }
+
+    .progress {
+      height: 100%;
+      width: 0%;
+      background: #1db954;
+      border-radius: 5px;
+    }
+
+    input[type="range"] {
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    footer{
+        text-align: center;
+    }
+
 
   </style>
 </head>
 <body>
+
+    <!--Music Player-->
+
+        <div class="player">
+        <div class="track-title" id="trackTitle">Nome da Música</div>
+        <audio id="audioPlayer" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+        
+        <div class="controls">
+          <button class="play-btn" id="playPauseBtn">▶️</button>
+        </div>
+        <div class="progress-container" id="progressContainer">
+          <div class="progress" id="progressBar"></div>
+        </div>
+        <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.5">
+          </div>
+
+
 
   <div class="slider">
     <div class="slides">
@@ -115,7 +177,14 @@
     </div>
   </div>
 
+  <footer>
+    <h1>Com muito amor</h1>
+    <span>Moisés</span>
+  </footer>
+
+
   <script>
+    // SLIDER
     const slides = document.querySelector('.slides');
     const slideElements = document.querySelectorAll('.slide');
     const prevButton = document.querySelector('.prev');
@@ -138,6 +207,50 @@
     setInterval(() => {
       showSlide(currentIndex + 1);
     }, 5000);
+
+    // Music Player
+
+     const audio = document.getElementById('audioPlayer');
+    const playPauseBtn = document.getElementById('playPauseBtn');
+    const progressBar = document.getElementById('progressBar');
+    const progressContainer = document.getElementById('progressContainer');
+    const volumeSlider = document.getElementById('volumeSlider');
+    const trackTitle = document.getElementById('trackTitle');
+
+    const track = {
+      title: "SoundHelix Song 1",
+      src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+    };
+
+    audio.src = track.src;
+    trackTitle.textContent = track.title;
+
+    playPauseBtn.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play();
+        playPauseBtn.textContent = '⏸️';
+      } else {
+        audio.pause();
+        playPauseBtn.textContent = '▶️';
+      }
+    });
+
+    audio.addEventListener('timeupdate', () => {
+      const percent = (audio.currentTime / audio.duration) * 100;
+      progressBar.style.width = percent + '%';
+    });
+
+    progressContainer.addEventListener('click', (e) => {
+      const width = progressContainer.clientWidth;
+      const clickX = e.offsetX;
+      const duration = audio.duration;
+      audio.currentTime = (clickX / width) * duration;
+    });
+
+    volumeSlider.addEventListener('input', () => {
+      audio.volume = volumeSlider.value;
+    });
+
   </script>
 
 </body>

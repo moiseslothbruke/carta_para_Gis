@@ -1,6 +1,3 @@
-/*
-Slider
-*/ 
 
 /*
 Player music
