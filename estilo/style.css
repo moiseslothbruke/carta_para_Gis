@@ -17,7 +17,7 @@ Paleta de cor:
 
 body{
     box-shadow: 2px, solid rgb(238, 147, 105);
-    background-color: rgb(241, 160, 122); /*adicionar gradiente*/
+    background-color: bisque; /*adicionar gradiente*/
 
     /*As partes sobrando terão molduras com fotos nossas*/
 }
@@ -39,15 +39,13 @@ body{
 header{
 
     background-color: bisque;
-    box-shadow: 1px 0px 5px rgba(233, 110, 110, 0.294);;
-
-
 }
 
 h1, h2{
     text-align: center;
     font-family: var(--fonteespecial);
-    color: #f02828c6;
+    color: rgb(241, 160, 122);
+    
 }
 
 .moldura{
@@ -90,7 +88,7 @@ main{
     max-width: 2340px;
     max-height: 1080px; 
     margin: auto;
-    box-shadow: 1px 1px 2px 2px inset rgba(0, 0, 0, 0.294);
+    box-shadow: 1px 1px 2px 2px  rgba(0, 0, 0, 0.294);
     box-shadow:  1px 2px 2px rgba(0, 0, 0, 0.419)
 }
 
