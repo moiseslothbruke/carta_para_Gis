@@ -16,8 +16,8 @@ Paleta de cor:
 }
 
 body{
-    box-shadow: 2px, solid sienna;
-    background-color: white; /*adicionar gradiente*/
+    box-shadow: 2px, solid rgb(238, 147, 105);
+    background-color: rgb(241, 160, 122); /*adicionar gradiente*/
 
     /*As partes sobrando terão molduras com fotos nossas*/
 }
@@ -39,7 +39,7 @@ body{
 header{
 
     background-color: bisque;
-    box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.294);;
+    box-shadow: 1px 0px 5px rgba(233, 110, 110, 0.294);;
 
 
 }
